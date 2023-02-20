@@ -1,0 +1,57 @@
+<!--Hey! This is the original version
+of Simple CSS Waves-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>BrainTect</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+</head>
+<nav class="bg-gray-900 h-16 flex items-center justify-between px-4">
+      <div>
+        <a href="/" action="/" class="text-2xl font-bold text-gray-100">BrainTect</a>
+      </div>
+      <div class="flex">
+        <a href="about" action="/about" class="text-gray-300 hover:text-gray-100 px-4">About the Creators</a>
+        <a href="info" action="/info" class="text-gray-300 hover:text-gray-100 px-4">What are Tumors?</a>
+      </div>
+    </nav>
+
+<div class="header">
+
+<!--Waves Container-->
+<div>
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+</div>
+<!--Waves end-->
+
+</div>
+<!--Header ends-->
+
+<!--Content ends-->
+
+<body>
+
+    <img class="resultimg" src="../static/images/{{image_name}}" alt="Uploaded image">
+
+    <h1 class="howtotitle">How to read this image</h1>
+
+    <p class="howto">What you see in front of you is an image of the MRI scan that you have supplied to this application. You will also see a red box around the tumor that was hopefully detected. If you do not see this box, the tumor was not detected. This probably means<br><br>1. The tumor does not exist<br>2. The tumor is too small to be detected.<br><br>Above the red box, you should see a number. This number is the "confidence" of this application. This means that the tumor was detected with this level of confidence. If you believe the confidence is too low (below 0.3), then the detected tumor might not be a tumor at all!<br><br>Good luck with your future detections!</p>
+
+</body>

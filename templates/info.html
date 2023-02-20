@@ -1,0 +1,62 @@
+<!--Hey! This is the original version
+of Simple CSS Waves-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>BrainTect</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
+</head>
+<nav class="bg-gray-900 h-16 flex items-center justify-between px-4">
+      <div>
+        <a href="/" action="/" class="text-2xl font-bold text-gray-100">BrainTect</a>
+      </div>
+      <div class="flex">
+        <a href="about" action="/about" class="text-gray-300 hover:text-gray-100 px-4">About the Creators</a>
+        <a href="info" action="/info" class="text-gray-300 hover:text-gray-100 px-4">What are Tumors?</a>
+      </div>
+    </nav>
+
+<div class="header">
+
+<!--Waves Container-->
+<div>
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+</div>
+<!--Waves end-->
+
+</div>
+<!--Header ends-->
+
+<!--Content ends-->
+
+<body>
+
+    <h1 class="prompt">What are Brain Tumors?</h1>
+
+    <p class="information">According to mayoclinic.org, "a brain tumor is a growth of cells in the brain or near it." When cells in a specific place in the brain start to grow, it can affect other parts of the brain in negative ways. Some brain tumors can in fact lead to death! <br><br>Common symptoms of brain tumors are: headaches, seizures, difficulty thinking, personality changes, weakness, loss of hearing, and changing in vision. This makes it important to identify a brain tumor as early as possible. <br><br>The most common brain tumors are: Gliomas and related brain tumors, choroid plexus tumors, embryonal tumors, and nerve tumors. </p>
+
+    <h1 class="prompt" >Uses and Backend Processes</h1>
+
+    <p class="information">Now how can this program be beneficial? This program can make parsing through images and identifying tumors more efficient. While combining together two of the biggest industries, this application utilizes machine learning methods to improve the medical industry.<br><br>This application uses YOLOv5 to identify the brain tumors, OpenCV to manage files and convert images to specific types, and Flask to manage the backend.<br><br></p>
+
+    <h1 class="prompt">Why this Application?</h1>
+
+    <p class="information">As a freshman in high school, I had a great appreciation for my teachers. Once I heard that my favorite teacher had a brain tumor, I decided to learn more about it. Improving effiency and the process of identifying brain tumors was a way I could help, so I decided to do that.<br><br>Through this program, I hope to improve the processes of the medical industry and make a change in the world.</p>
+</body>

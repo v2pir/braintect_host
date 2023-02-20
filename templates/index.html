@@ -1,0 +1,65 @@
+<!--Hey! This is the original version
+of Simple CSS Waves-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>BrainTect</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<nav class="bg-gray-900 h-16 flex items-center justify-between px-4">
+      <div>
+        <a href="/" action="/" class="text-2xl font-bold text-gray-100">BrainTect</a>
+      </div>
+      <div class="flex">
+        <a href="about" action="/about" class="text-gray-300 hover:text-gray-100 px-4">About the Creators</a>
+        <a href="info" action="/info" class="text-gray-300 hover:text-gray-100 px-4">What are Tumors?</a>
+      </div>
+    </nav>
+
+<div class="header">
+
+<!--Waves Container-->
+<div>
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+</div>
+<!--Waves end-->
+
+</div>
+<!--Header ends-->
+
+<!--Content ends-->
+
+<body>
+        <div class="inputsec">
+            <form style="text-align: center; padding: 50px;" action="/upload" method="POST" enctype="multipart/form-data">
+                <input style="color: red;" type="file" name="file">
+                <input style="font-size: 20px; padding: 5px; background-color: rgb(198, 90, 153); border-radius: 5px;" type="submit" value="Upload">
+            </form>
+            
+            <script src="script.js"></script>
+        </div>
+
+        <h1 class="howusetitle">How To Use This Application</h1>
+        <p class="howuse">To detect a tumor in an MRI scan, upload your MRI scan. After a few seconds, this should bring you to a new tab with the tumor (hopefully) detected. <br><br>There is no way to detect multiple images at once. If you have multiple images, you will have to upload them separately.</p>
+
+        <h1 class="howusetitle">How did this project start?</h1>
+        <p class="howuse">This project started as a hackthon project. Within those days, my goal was to come up with a product to benefit the world as well as improve my backend, frontend, and machine learning skills. In the future, I hope to improve this project by adding a few more applications.</p>
+</body>
+</html>
