@@ -5,3 +5,13 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 Werkzeug==1.0.1
+seaborn==0.12.2
+pandas==1.5.3
+opencv-python==4.6.0.66
+torch==1.13.1
+torchaudio==0.13.1
+torchaudio==0.13.1
+torchvision==0.14.1
+tqdm==4.64.1
+psutil==5.9.4
+numpy==1.22.3
